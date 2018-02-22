@@ -4,7 +4,7 @@ for (var i = 0; i < 100; i++) {
 
     var asteroid = new Image();
     asteroid.id = "asteroid" + i.toString();
-    asteroid.src = "asteroid.png";
+    asteroid.src = "images/asteroid.png";
     asteroid.style.height = (((Math.random() * 6) + 0)*30);
     asteroid.style.position = "absolute";
     asteroid.style.top = (((Math.random() * 6) + 0)*100);

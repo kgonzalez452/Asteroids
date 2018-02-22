@@ -6,7 +6,7 @@ for (var i = 0; i < 100; i++) {
 
   var asteroid = new Image();
   asteroid.id = "asteroid" + i.toString();
-  asteroid.src = "asteroid.png";
+  asteroid.src = "../images/asteroid.png";
   asteroid.style.height = (((Math.random() * 6) + 0)*30);
   asteroid.style.position = "absolute";
   asteroid.style.top = (((Math.random() * 6) + 0)*100);
@@ -159,7 +159,7 @@ function gameLoop()
           document.getElementById("healthCounter").innerHTML = "GAME OVER";
           document.getElementById("ship").remove();  // ship disappears
         }
-        var audio = new Audio('explosion.wav');  // load explosion sound (creative commons license: https://www.freesound.org/people/Veiler/sounds/264031/)
+        var audio = new Audio('../sound/explosion.wav');  // load explosion sound (creative commons license: https://www.freesound.org/people/Veiler/sounds/264031/)
         audio.play();  // play explosion sound
         arrayOfMovingAsteroids[i].remove();  // asteroid disappears
       }

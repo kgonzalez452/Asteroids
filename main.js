@@ -1,5 +1,7 @@
 import createAsteroids from "./createAsteroids.js";
-import controls from "./controls.js";
+import {controls, keyDown, keyUp} from "./controls.js";
+import config from "./controls.js";
+
     
   function gameLoop()
   {
@@ -74,7 +76,7 @@ import controls from "./controls.js";
             document.getElementById("healthCounter").innerHTML = "GAME OVER";
             document.getElementById("ship").remove();  // ship disappears
           }
-          var audio = new Audio('explosion.wav');  // load explosion sound (creative commons license: https://www.freesound.org/people/Veiler/sounds/264031/)
+          var audio = new Audio('sound/explosion.wav');  // load explosion sound (creative commons license: https://www.freesound.org/people/Veiler/sounds/264031/)
           audio.play();  // play explosion sound
           arrayOfMovingAsteroids[i].remove();  // asteroid disappears
         }
